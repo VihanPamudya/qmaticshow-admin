@@ -1,0 +1,36 @@
+.mat-mdc-table .mdc-data-table__row:hover{
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+// .ng-star-inserted{
+//   border-top-left-radius: 8px;
+// border-top-right-radius: 8px;
+// }
+
+.normal-header{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.search {
+  font-size: 50px;
+  height: 70px;
+  width: 70px;
+}
+
+.mat-elevation-z8{
+  border-radius: 8px;
+}
+
+.mat-mdc-paginator{
+  border-radius: 8px;
+}
+
+.mat-mdc-header-row{
+  background-color: #c8e1f1;
+}
+
+table{    
+  border-radius: 8px;
+  overflow:hidden !important;
+}

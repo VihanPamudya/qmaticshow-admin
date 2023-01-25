@@ -1,0 +1,13 @@
+footer {
+    background-color: rgb(194, 213, 231);
+    height:50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+    .footer-p{
+      text-align: center;
+      margin: 15px auto;
+      color: rgba(0,0,0,.6);
+    }
+  }

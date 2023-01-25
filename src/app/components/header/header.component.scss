@@ -1,0 +1,18 @@
+.mat-toolbar {
+  background: #c8e1f1;
+
+  img {
+    width: 85px;
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  .de-header {
+    flex: 1 1 auto;
+    align-self: center;
+    font-size: 1.3125rem;
+    line-height: 1.6875rem;
+    color: #63635e;
+    margin-left: 1rem;
+  }
+}

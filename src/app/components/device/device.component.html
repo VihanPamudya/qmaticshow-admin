@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row mt-5" style="width: 95%; margin: 5% auto">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort *ngIf="displayData.length > 0 ; else noData">
+
+          <ng-container matColumnDef="name">
+            <th class="header" mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+            <td mat-cell *matCellDef="let row">{{ row.name | titlecase }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="unitId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Unit Id</th>
+            <td mat-cell *matCellDef="let row">{{ row.unitId | titlecase }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="minVisitDisplayTime">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Min Visit Display Time</th>
+            <td mat-cell *matCellDef="let row">{{ row.parameters.minVisitDisplayTime }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="bandwidthLimit">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Bandwidth Limit</th>
+            <td mat-cell *matCellDef="let row">{{ row.parameters.bandwidthLimit }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="screenRotation">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Screen Rotation</th>
+            <td mat-cell *matCellDef="let row">{{ row.parameters.screenRotation | titlecase }}</td>
+          </ng-container>
+
+          
+
+          <ng-container matColumnDef="mediaUpdateTime">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Media UpdateTime</th>
+            <td mat-cell *matCellDef="let row">{{ row.parameters.mediaUpdateTime }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="queues">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Queues</th>
+            <td mat-cell *matCellDef="let row">{{ row.parameters.queues | titlecase }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+            <td mat-cell *matCellDef="let row">
+              <button
+                mat-icon-button
+                color="primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <ng-template #noData>
+        <svg class="normal-header" width="100%" height="54">
+          <rect width="100%" height="54" style="fill:#c8e1f1;" />
+        </svg> 
+        <div style="margin: 90px auto; text-align: center;">
+          <mat-icon class="search" style="color: #1d85c5;">search</mat-icon>
+          <div style="color: rgba(0, 0, 0, 0.6);">Select a branch above to see the devices</div>
+        </div>
+       
+      </ng-template>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page of users"
+      ></mat-paginator>
+    </div>
+  </div>
+</div>
