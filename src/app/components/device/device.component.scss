@@ -1,13 +1,8 @@
-.mat-mdc-table .mdc-data-table__row:hover{
-  background-color: rgba(0, 0, 0, 0.42);
+.mat-mdc-table .mdc-data-table__row:hover {
+  background-color: #f1f1f1;
 }
 
-// .ng-star-inserted{
-//   border-top-left-radius: 8px;
-// border-top-right-radius: 8px;
-// }
-
-.normal-header{
+.normal-header {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -18,19 +13,37 @@
   width: 70px;
 }
 
-.mat-elevation-z8{
+.mat-elevation-z8 {
   border-radius: 8px;
 }
 
-.mat-mdc-paginator{
+.mat-mdc-paginator {
   border-radius: 8px;
+  margin-top: 110px;
 }
 
-.mat-mdc-header-row{
+.mat-mdc-header-row {
   background-color: #c8e1f1;
 }
 
-table{    
-  border-radius: 8px;
-  overflow:hidden !important;
+table {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 2px solid #c8e1f1;
+  overflow: hidden !important;
+}
+
+td {
+  border-bottom: 2px solid #c8e1f1;
+  font-size: 13px;
+  color: rgba(0,0,0,.6);
+}
+
+th{
+  font-size: 13px;
+  color: rgba(0,0,0,.6);
+}
+
+.table-row {
+  height: 70px !important;
 }
